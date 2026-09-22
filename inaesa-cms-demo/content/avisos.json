@@ -1,0 +1,44 @@
+{
+  "avisos": [
+    {
+      "titulo": "Convocatoria abierta: nuevo ciclo de Secundaria y Bachillerato",
+      "fecha": "2026-09-15",
+      "categoria": "Admisiones",
+      "resumen": "Inscripciones abiertas para el ciclo que inicia el 5 de octubre. Cupo limitado por grupo.",
+      "cuerpo": "Ya está abierta la inscripción para el nuevo ciclo de Secundaria (6 meses) y Bachillerato (6 meses), con validez oficial y horario de 1 día a la semana. Agenda tu cita de informes en recepción o por WhatsApp.",
+      "publicado": true
+    },
+    {
+      "titulo": "Ceremonia de graduación, generación 2026",
+      "fecha": "2026-08-30",
+      "categoria": "Eventos",
+      "resumen": "Celebramos a la generación que concluyó sus estudios este ciclo. Gracias a todas las familias que nos acompañaron.",
+      "cuerpo": "El pasado 30 de agosto realizamos la ceremonia de graduación en nuestras instalaciones de Zona Centro. Muy pronto compartiremos la galería de fotos oficial.",
+      "publicado": true
+    },
+    {
+      "titulo": "Nuevo taller sabatino de Mecatrónica",
+      "fecha": "2026-09-10",
+      "categoria": "Académico",
+      "resumen": "Grupo adicional los sábados por la mañana para quienes no pueden asistir entre semana.",
+      "cuerpo": "Por demanda de nuestros estudiantes, abrimos un grupo sabatino del programa de Capacitación Técnica en Mecatrónica. Cupo limitado a 20 lugares.",
+      "publicado": true
+    },
+    {
+      "titulo": "Actualización de horario de atención en recepción",
+      "fecha": "2026-09-05",
+      "categoria": "Aviso general",
+      "resumen": "A partir de este mes, recepción atiende de 9:00 a 18:00, de lunes a viernes.",
+      "cuerpo": "Ajustamos el horario de atención en recepción para dar mejor servicio a las familias que solicitan informes por la tarde.",
+      "publicado": true
+    },
+    {
+      "titulo": "Aviso de ejemplo, aún no publicado",
+      "fecha": "2026-09-20",
+      "categoria": "Aviso general",
+      "resumen": "Este aviso tiene 'publicado' en falso y por eso no aparece en la página pública: así se ve un borrador en el panel.",
+      "cuerpo": "El director puede dejar avisos en borrador desde el panel antes de publicarlos.",
+      "publicado": false
+    }
+  ]
+}

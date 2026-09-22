@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>INAESA — Instituto Americano de Estudios Abiertos</title>
+  <meta name="description" content="Ciencia, tecnología y valores. Secundaria, bachillerato, capacitación técnica, licenciaturas, ingenierías y maestrías con validez oficial.">
+  <meta name="theme-color" content="#1D4171">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio">
+        <span class="crest" aria-hidden="true">IN</span>
+        <span class="brand-text"><strong>INAESA</strong><span>Ciencia · Tecnología · Valores</span></span>
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <a href="#programas">Programas</a>
+        <a href="#avisos">Avisos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-nav">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Móvil">
+      <a href="#programas">Programas</a>
+      <a href="#avisos">Avisos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="container hero-inner hero-enter">
+        <p class="eyebrow">Guadalajara, Zona Centro</p>
+        <h1>Formación con validez oficial, un día a la semana</h1>
+        <p class="lead">De secundaria a maestría: educación flexible para quienes trabajan y estudian, con ciencia, tecnología y valores en el centro.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#contacto">Pide informes</a>
+          <a class="btn btn-ghost-inverse" href="#programas">Ver programas</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="programas" class="section">
+      <div class="container">
+        <div class="section-head reveal-hidden">
+          <p class="eyebrow">Ruta educativa</p>
+          <h2>Cinco niveles, un mismo camino</h2>
+          <p>Cada nivel tiene validez oficial y horario de un día a la semana, en clases de 4 horas.</p>
+        </div>
+        <div class="route reveal-hidden">
+          <article class="route-step"><span class="num">1</span><h3>Secundaria</h3><p>6 meses.</p></article>
+          <article class="route-step"><span class="num">2</span><h3>Bachillerato</h3><p>6 meses.</p></article>
+          <article class="route-step"><span class="num">3</span><h3>Capacitación técnica</h3><p>Bachillerato + capacitación para el trabajo, 24 meses. Mecatrónica, inglés, informática, Excel, electrónica, administración, logística.</p></article>
+          <article class="route-step"><span class="num">4</span><h3>Licenciatura / Ingeniería</h3><p>Psicología, administración de empresas, ingeniería industrial, ingeniería en sistemas computacionales.</p></article>
+          <article class="route-step"><span class="num">5</span><h3>Maestría</h3><p>Administración y transformación organizativa, desarrollo cognitivo, psicología organizacional sostenible, Lean Six Sigma.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="avisos" class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal-hidden">
+          <p class="eyebrow">Avisos</p>
+          <h2>Lo que el director publica desde el panel</h2>
+          <p>Esta sección se llena sola desde <code>content/avisos.json</code>: es lo único que se edita en <a href="admin/">/admin</a>, sin tocar código.</p>
+        </div>
+        <div id="avisos-list" class="avisos-grid reveal-hidden" aria-live="polite">
+          <div class="avisos-skeleton"></div>
+          <div class="avisos-skeleton"></div>
+          <div class="avisos-skeleton"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="section">
+      <div class="container contact">
+        <div class="reveal-hidden">
+          <p class="eyebrow">Contacto</p>
+          <h2 style="margin-bottom:1.5rem">Agenda tu cita de informes</h2>
+          <div class="contact-card" id="contact-card">
+            <h3>Recepción</h3>
+            <div class="contact-row"><span><strong>Dirección</strong><span id="c-direccion">—</span></span></div>
+            <div class="contact-row"><span><strong>Teléfono</strong><span id="c-telefono">—</span></span></div>
+            <div class="contact-row"><span><strong>Correo</strong><span id="c-correo">—</span></span></div>
+            <div class="contact-row"><span><strong>Horario</strong><span id="c-horario">—</span></span></div>
+          </div>
+        </div>
+        <div class="director-msg reveal-hidden">
+          <p class="eyebrow">Mensaje del director</p>
+          <p id="c-mensaje">—</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> INAESA. Todos los derechos reservados.</span>
+      <span>Demo de plantilla + panel de administración — no es el sitio público real.</span>
+    </div>
+  </footer>
+
+  <a class="wa-float" id="wa-link" target="_blank" rel="noopener" href="#">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.2-.7-2.7-1.1-4.4-3.8-4.6-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9.9-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.1.1.3 0 .5l-.3.4-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.1 1.5 1.8 1 .9 1.8 1.2 2.1 1.3.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2z"/></svg>
+    WhatsApp
+  </a>
+
+  <script src="main.js" defer></script>
+  <!-- Necesario para que las invitaciones/confirmaciones de Netlify Identity redirijan bien a /admin/ -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on('init', (user) => {
+        if (!user) {
+          window.netlifyIdentity.on('login', () => { document.location.href = '/admin/'; });
+        }
+      });
+    }
+  </script>
+</body>
+</html>

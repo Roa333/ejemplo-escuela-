@@ -1,0 +1,56 @@
+# Panel de administración (Decap CMS) para INAESA.
+# El director solo ve dos colecciones: Avisos e Información general. No toca código ni HTML.
+
+backend:
+  name: git-gateway   # Requiere Netlify Identity + Git Gateway activados en el sitio real (ver README).
+  branch: main
+
+# Permite probar el panel en la computadora, sin desplegar a Netlify:
+#   1) npx decap-server
+#   2) sirve esta carpeta con un servidor local (ej. npx serve) y abre /admin/
+# En producción (Netlify) puedes dejar esta línea: se ignora si no hay decap-server corriendo.
+local_backend: true
+
+media_folder: "assets/avisos"
+public_folder: "/assets/avisos"
+
+collections:
+  - name: "avisos"
+    label: "Avisos y comunicados"
+    label_singular: "Aviso"
+    description: "Lo que aparece en la sección 'Avisos' de la página. Publica, edita o pon en borrador cada uno."
+    files:
+      - file: "content/avisos.json"
+        label: "Lista de avisos"
+        name: "avisos"
+        fields:
+          - label: "Avisos"
+            name: "avisos"
+            widget: "list"
+            label_singular: "Aviso"
+            summary: "{{titulo}} — {{fecha}}"
+            fields:
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Fecha", name: "fecha", widget: "date", format: "YYYY-MM-DD" }
+              - label: "Categoría"
+                name: "categoria"
+                widget: "select"
+                options: ["Admisiones", "Eventos", "Académico", "Aviso general"]
+              - { label: "Resumen (se ve en la tarjeta)", name: "resumen", widget: "text" }
+              - { label: "Texto completo (opcional, para uso futuro)", name: "cuerpo", widget: "markdown", required: false }
+              - { label: "Imagen (opcional)", name: "imagen", widget: "image", required: false }
+              - { label: "Publicado", name: "publicado", widget: "boolean", default: true, hint: "Si lo apagas, el aviso se guarda pero no aparece en la página." }
+
+  - name: "info"
+    label: "Información general"
+    files:
+      - file: "content/info.json"
+        label: "Datos de contacto"
+        name: "info"
+        fields:
+          - { label: "Dirección", name: "direccion", widget: "string" }
+          - { label: "Teléfono (como se muestra)", name: "telefono", widget: "string" }
+          - { label: "WhatsApp (solo números, con 52 al inicio)", name: "whatsapp", widget: "string", pattern: ['^\d{10,13}$', "Solo números, sin espacios ni signos"] }
+          - { label: "Correo", name: "correo", widget: "string" }
+          - { label: "Horario", name: "horario", widget: "string" }
+          - { label: "Mensaje del director", name: "mensaje_director", widget: "text" }
