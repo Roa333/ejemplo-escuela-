@@ -31,7 +31,7 @@ collections:
             summary: "{{titulo}} — {{fecha}}"
             fields:
               - { label: "Título", name: "titulo", widget: "string" }
-              - { label: "Fecha", name: "fecha", widget: "date", format: "YYYY-MM-DD" }
+- { label: "Fecha", name: "fecha", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, picker_utc: true }
               - label: "Categoría"
                 name: "categoria"
                 widget: "select"
