@@ -2,13 +2,9 @@
 # El director solo ve dos colecciones: Avisos e Información general. No toca código ni HTML.
 
 backend:
-  name: git-gateway   # Requiere Netlify Identity + Git Gateway activados en el sitio real (ver README).
+  name: git-gateway
   branch: main
 
-# Permite probar el panel en la computadora, sin desplegar a Netlify:
-#   1) npx decap-server
-#   2) sirve esta carpeta con un servidor local (ej. npx serve) y abre /admin/
-# En producción (Netlify) puedes dejar esta línea: se ignora si no hay decap-server corriendo.
 local_backend: true
 
 media_folder: "assets/avisos"
@@ -31,7 +27,7 @@ collections:
             summary: "{{titulo}} — {{fecha}}"
             fields:
               - { label: "Título", name: "titulo", widget: "string" }
-- { label: "Fecha", name: "fecha", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, picker_utc: true }
+              - { label: "Fecha", name: "fecha", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, picker_utc: true }
               - label: "Categoría"
                 name: "categoria"
                 widget: "select"
